@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Adding</title>
+</head>
+<body>
+    <input type="number" id="myNumber">
+    <p id="theNumber">The Number is in the console</p>
+    <button onclick="addNumber()">Get the Number</button>
+
+
+    <script>
+        var newNum = 0;
+       function addNumber(){
+        var x = document.getElementById("myNumber").value;
+        console.log(x)
+        if(x >= 1 || x <= 1000){
+            for(i = 1; i <= x; i++){
+                newNum += i;
+            }
+
+        }else{
+            console.log("The number must be between 1 and 1000")
+        }
+        console.log(newNum)
+       }
+    </script>
+</body>
+</html>

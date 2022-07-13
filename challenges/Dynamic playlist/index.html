@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic playlist</title>
+    <script src="https://kit.fontawesome.com/eca2c4fa11.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <style>
+        html{
+            background-color: #1D1D1D;
+        }
+        .player{
+            height: 95vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #1D1D1D;
+            color: #08FDD8;
+            margin-top: 20px;
+        }
+        .wrapper{
+            border: 1px solid #08FDD8;
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px 5px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%);
+            background-color: #1D1D1D;
+        }
+        .details{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .track-art{
+            margin: 25px;
+            height: 250px;
+            width: 250px;
+            border: 2px solid #fff;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            box-shadow: 0 2px 10px 5px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%);
+
+        }
+        .now-playing{
+            font-size: 1rem;
+        }
+        .track-name{
+            margin-top: 5px;
+            font-size: 2.5rem;
+            color: white;
+        }
+        .track-artist{
+            margin-top: 5px;
+            font-size: 1.5rem;
+        }
+        .buttons{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .repeat-track,
+        .random-track,
+        .playpause-track,
+        .prev-track,
+        .next-track{
+            padding: 25px;
+            transition: 200ms;
+        }
+        .repeat-track:hover,
+        .random-track:hover,
+        .playpause-track:hover,
+        .prev-track:hover,
+        .next-track:hover{
+            color: white;
+        }
+        .slider_container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .seek_slider,
+        .volume_slider{
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            height: 5px;
+            background: #83a9ff;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+                
+        .seek_slider::-webkit-slider-thumb,
+        .volume_slider::-webkit-slider-thumb{
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            background: white;
+            border: 3px solid #3774ff;
+            cursor: pointer;
+            border-radius: 100%;
+        }
+        .seek_slider{
+            width: 60%;
+        }
+        .volume_slider{
+            width: 30%;
+        }
+        .current-time,
+        .total-duration{
+            padding: 10px;
+            color: white;
+        }
+        i.fa-volume-down,
+        i.fa-volume-up{
+            padding: 10px;
+        }
+        i,
+        i.fa-play-circle,
+        i.fa-pause-circle,
+        i.fa-step-forward,
+        i.fa-step-backward{
+            cursor: pointer;
+        }
+        .randomActive{
+        color: white;
+        }
+        .rotate{
+            animation: rotation 8s infinite linear;
+        }
+        @keyframes rotation{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(359deg);
+            }
+        }
+    </style>
+    <div class="player">
+        <div class="wrapper">
+            <div class="details">
+                <div class="now-playing">PLAYING x OF y</div>
+                <div class="track-name">Track Name</div>
+                <div class="track-art"></div>
+                <div class="track-artist">Track Artist</div>
+            </div>
+
+            <div class="slider_container">
+                <div class="current-time">00:00</div>
+                <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                <div class="total-duration">00:00</div>
+            </div>
+            
+            <div class="slider_container">
+                <i class="fa fa-volume-down"></i>
+                <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+                <i class="fa fa-volume-up"></i>
+            </div>
+
+            <div class="buttons">
+                <div class="random-track" onclick="randomTrack()">
+                    <i class="fas fa-random fa-2x" title="random"></i>
+                </div>
+                <div class="prev-track" onclick="prevTrack()">
+                    <i class="fa-solid fa-backward-step fa-2x"></i>
+                </div>
+                <div class="playpause-track" onclick="playpauseTrack()">
+                    <i class="fas fa-play-circle fa-5x" title="random"></i>
+                </div>
+                <div class="next-track" onclick="nextTrack()">
+                    <i class="fas fa-step-forward fa-2x" title="random"></i>
+                </div>
+                <div class="repeat-track" onclick="repeatTrack()">
+                    <i class="fa-solid fa-repeat fa-2x"></i>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

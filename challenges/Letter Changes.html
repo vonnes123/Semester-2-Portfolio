@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter Changes</title>
+</head>
+<body>
+    <input type="text" id="words">
+    <p>The modified word is in the console</p>
+    <button id="getWord" onclick="changeWord()">Get word</button>
+
+
+    <script>
+        let wordsInput = document.getElementById("words");
+
+        function changeWord(){
+
+            var newWord = [];
+            var word = [];
+            
+            var wordsVal = wordsInput.value;
+            var strSplit = wordsVal.split('');
+ 
+            for(i = 0; i <= strSplit.length -1; i++){
+
+                var char = strSplit[i].charCodeAt();
+                console.log(char)
+                if(char == 122){
+                    newWord.push(String.fromCharCode(65));
+                    console.log(newWord)
+
+                }else if(char == 32){
+                    newWord.push(String.fromCharCode(32));
+
+                }else if(char +1 == 101){
+                    newWord.push(String.fromCharCode(69))
+                }
+                else if(char +1 == 105){
+                    newWord.push(String.fromCharCode(73))
+                }
+                else if(char +1 == 111){
+                    newWord.push(String.fromCharCode(79))
+                }
+                else if(char +1 == 117){
+                    newWord.push(String.fromCharCode(85))
+                }else{
+                    newWord.push(String.fromCharCode(char+1))                    
+                }
+            }
+            console.log(newWord.join(''));
+
+        }
+
+
+    </script>
+</body>
+</html>

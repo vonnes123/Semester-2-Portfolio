@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longest word</title>
+</head>
+<body>
+    <input type="text" id="words">
+    <p>Longest word is in the console</p>
+    <button id="getWord" onclick="getLongWord()">Get word</button>
+
+    <script>
+        let wordsInput = document.getElementById("words");
+        function getLongWord(){
+            let wordsVal = wordsInput.value;
+            console.log(wordsVal)
+            var strSplit = wordsVal.split(' ');
+            var ordered = strSplit.sort(function(a,b) {
+                return b.length - a.length;
+            });
+            console.log(`The longest word is "${ordered[0]}"`)
+            
+
+        }
+
+    </script>
+</body>
+</html>

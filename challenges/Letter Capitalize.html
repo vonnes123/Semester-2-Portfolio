@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter Capitalize</title>
+</head>
+<body>
+    <input type="text" id="words">
+    <p>The capitalized words are in the console</p>
+    <button id="getWord" onclick="capitalizeWords()">Get words</button>
+
+    <script>
+        let wordsInput = document.getElementById("words");
+        
+        function capitalizeWords(){
+            let wordsVal = wordsInput.value;
+            console.log(wordsVal)
+            var strSplit = wordsVal.split(' ');
+            console.log(strSplit)
+            var newWord = [];
+
+            for(i=0; i<strSplit.length; i++){
+                newWord[i] = strSplit[i].charAt(0).toUpperCase() + strSplit[i].substr(1);
+            }
+            console.log(newWord.join(' '))
+        }
+
+    </script>
+</body>
+</html>

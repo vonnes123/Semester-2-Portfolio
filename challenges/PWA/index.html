@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href=".VT-Logo.svg">
+    <link rel="manifest" href="manifest.json">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <style>
+    body{
+    width: 100%;
+    height: 100%;
+    background-color: #1D1D1D;
+    display: flex;
+    justify-content:center;
+    margin: 0;
+    padding: 0;
+    }
+    .tic-container{
+    background-color: #1D1D1D;
+    padding: 50px;
+    height: 600px;
+    width: 450px;
+    display: block;
+    align-items: center;
+    justify-content: space-around;
+}
+.tic-title{
+    text-align: center;
+    font-size: 2rem;
+    color: #08FDD8;
+}
+.tic-title span{
+    color: white;
+}
+.tic-status-action{
+    display: flex;
+    margin-top: 25px;
+    font-size: 1.5rem;
+    justify-content: space-around;
+    color: #08FDD8;
+}
+.tic-status span{
+    color: white;
+}
+.tic-reset{
+    cursor: pointer;
+    color: white;
+}
+
+.tic-reset:hover{
+    color: #08FDD8;
+}
+
+.tic-grid{
+    background: #08FDD8;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 15px;
+    margin-top: 30px;
+}
+.tic-cell{
+    background:#1D1D1D ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+}
+.x, .o{
+    cursor: default;
+}
+.x{
+    color: #08FDD8;
+}
+.o{
+    color: white;
+}
+.x::before{
+    content: '×';
+    font-size: 150px;
+}
+.o::before{
+    content: '○';
+    font-size: 160px;
+}
+
+.won {
+    color: #BD022F;
+}
+@media only screen and (max-width: 600px) {
+    .tic-container{
+    padding: 25px;
+    height: 300px;
+    width: 225px;
+    margin-top: 25%;
+}
+.tic-title{
+    font-size: 1rem;
+}
+.tic-status-action{
+    margin-top: 12.5px;
+    font-size: 0.75rem;
+}
+.tic-grid{
+    grid-gap: 7.5px;
+    margin-top: 15px;
+}
+.tic-cell{
+    height: 75px;
+    width: 75px;
+}
+.x::before{
+    font-size: 75px;
+}
+.o::before{
+    font-size: 80px;
+}
+}
+    </style>
+
+
+    <div class="tic-container">
+        <h1 class="tic-title">Tic <span>Tac</span> Toe</h1>
+        <div class="tic-status-action">
+            <div class="tic-status">X is next</div>
+            <div class="tic-reset">Reset</div>
+        </div>
+        <div class="tic-grid">
+            <div class="tic-cell top-left"></div>
+            <div class="tic-cell top-mid"></div>
+            <div class="tic-cell top-right"></div>
+            <div class="tic-cell mid-left"></div>
+            <div class="tic-cell mid-mid"></div>
+            <div class="tic-cell mid-right"></div>
+            <div class="tic-cell bot-left"></div>
+            <div class="tic-cell bot-mid"></div>
+            <div class="tic-cell bot-right"></div>
+        </div>
+    </div>
+
+
+
+    <script>
+        const statusDiv = document.querySelector('.tic-status');
+const resetDiv = document.querySelector('.tic-reset');
+const cellDivs = document.querySelectorAll(".tic-cell");
+
+const xSymbol = '×';
+const oSymbol = '○';
+
+let gameIsLive = true;
+let xIsNext = true;
+let winner = null
+
+const letterToSymbol = (letter) => letter === 'x' ? xSymbol : oSymbol;
+
+const handleWin = (letter) => {
+  gameIsLive = false;
+  if (letter === 'x') {
+    statusDiv.innerHTML = `${letterToSymbol(letter)} has won!`;
+  } else {
+    statusDiv.innerHTML = `<span>${letterToSymbol(letter)} has won!</span>`;
+  }
+};
+
+const checkGameStatus = () => {
+  const topLeft = cellDivs[0].classList[2];
+  const topMiddle = cellDivs[1].classList[2];
+  const topRight = cellDivs[2].classList[2];
+  const middleLeft = cellDivs[3].classList[2];
+  const middleMiddle = cellDivs[4].classList[2];
+  const middleRight = cellDivs[5].classList[2];
+  const bottomLeft = cellDivs[6].classList[2];
+  const bottomMiddle = cellDivs[7].classList[2];
+  const bottomRight = cellDivs[8].classList[2];
+
+  if (topLeft && topLeft === topMiddle && topLeft === topRight) {
+    handleWin(topLeft);
+    cellDivs[0].classList.add('won');
+    cellDivs[1].classList.add('won');
+    cellDivs[2].classList.add('won');
+  } else if (middleLeft && middleLeft === middleMiddle && middleLeft === middleRight) {
+    handleWin(middleLeft);
+    cellDivs[3].classList.add('won');
+    cellDivs[4].classList.add('won');
+    cellDivs[5].classList.add('won');
+  } else if (bottomLeft && bottomLeft === bottomMiddle && bottomLeft === bottomRight) {
+    handleWin(bottomLeft);
+    cellDivs[6].classList.add('won');
+    cellDivs[7].classList.add('won');
+    cellDivs[8].classList.add('won');
+  } else if (topLeft && topLeft === middleLeft && topLeft === bottomLeft) {
+    handleWin(topLeft);
+    cellDivs[0].classList.add('won');
+    cellDivs[3].classList.add('won');
+    cellDivs[6].classList.add('won');
+  } else if (topMiddle && topMiddle === middleMiddle && topMiddle === bottomMiddle) {
+    handleWin(topMiddle);
+    cellDivs[1].classList.add('won');
+    cellDivs[4].classList.add('won');
+    cellDivs[7].classList.add('won');
+  } else if (topRight && topRight === middleRight && topRight === bottomRight) {
+    handleWin(topRight);
+    cellDivs[2].classList.add('won');
+    cellDivs[5].classList.add('won');
+    cellDivs[8].classList.add('won');
+  } else if (topLeft && topLeft === middleMiddle && topLeft === bottomRight) {
+    handleWin(topLeft);
+    cellDivs[0].classList.add('won');
+    cellDivs[4].classList.add('won');
+    cellDivs[8].classList.add('won');
+  } else if (topRight && topRight === middleMiddle && topRight === bottomLeft) {
+    handleWin(topRight);
+    cellDivs[2].classList.add('won');
+    cellDivs[4].classList.add('won');
+    cellDivs[6].classList.add('won');
+  } else if (topLeft && topMiddle && topRight && middleLeft && middleMiddle && middleRight && bottomLeft && bottomMiddle && bottomRight) {
+    gameIsLive = false;
+    statusDiv.innerHTML = 'Game is tied!';
+  } else {
+    xIsNext = !xIsNext;
+    if (xIsNext) {
+      statusDiv.innerHTML = `${xSymbol} is next`;
+    } else {
+      statusDiv.innerHTML = `<span>${oSymbol} is next</span>`;
+    }
+  }
+};
+
+
+const handleReset = () => {
+  xIsNext = true;
+  statusDiv.innerHTML = `${xSymbol} is next`;
+  for (const cellDiv of cellDivs) {
+    cellDiv.classList.remove('x');
+    cellDiv.classList.remove('o');
+    cellDiv.classList.remove('won');
+  }
+  gameIsLive = true;
+};
+
+const handleCellClick = (e) => {
+  const classList = e.target.classList;
+
+  if (!gameIsLive || classList[2] === 'x' || classList[2] === 'o') {
+    return;
+  }
+
+  if (xIsNext) {
+    classList.add('x');
+    checkGameStatus();
+  } else {
+    classList.add('o');
+    checkGameStatus();
+  }
+};
+
+
+resetDiv.addEventListener('click', handleReset);
+
+for (const cellDiv of cellDivs) {
+  cellDiv.addEventListener('click', handleCellClick)
+}
+
+    </script>
+    <script>
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+        }
+    </script>
+</body>
+</html>

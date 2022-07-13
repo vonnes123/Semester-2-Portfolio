@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Symbol</title>
+</head>
+<body>
+    <input type="text" id="words">
+    <p>We can see if the symbol is accepted in the console</p>
+    <button id="getWord" onclick="checkSymbol()">Check Symbol</button>
+
+    <script>
+        let wordsInput = document.getElementById("words");  
+
+
+        function checkSymbol() { 
+
+            var word =  wordsInput.value;
+            //++d+===+c++==a
+            var wordArr = word.toLowerCase().split('');
+            for (var i = 0; i < wordArr.length; i++) {
+                if (wordArr[i] >= "a" && wordArr[i] <= "z") {
+                    if (wordArr[i-1] !== "+" || wordArr[i+1] !== "+") {
+                        return console.log("The symbol is not correct");
+                    }
+                    if (i === 0 || i === wordArr.length) {
+                        return console.log("The symbol is not correct");
+                    }
+                }
+            }
+                return console.log('The symbol is correct')
+        }
+    </script>
+</body>
+</html>
