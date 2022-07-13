@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan&family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="./images/VT-Logo.svg">
+    <link rel="manifest" href="manifest.json">
+    <title>The Portfolio of Vasil Todorov</title>
+    <script src="https://kit.fontawesome.com/eca2c4fa11.js" crossorigin="anonymous"></script>
+</head>
+<body id="body">
+    <div id="main-container">
+        <nav class="main-nav">
+
+            <a href="#"><img src="./images/VT-Logo.svg" alt="Vasil Todorov logo" class="logo" onmouseenter="mouseIn()" onmouseleave="mouseOut()"></a>
+        <div class="navButtons">
+            <a href="#front-end-container"><button class="button">Front-end</button></a>
+            <a href="#UX-container"><button class="button">UCD</button></a>
+            <a href="#media-conatiner"><button class="button">Media design</button></a>
+        </div>
+    </nav>
+        <div class="main-container">
+            <div class="main-herobox" id="main-herobox">
+                <a href="#front-end-container" class="box1" id="box1">
+                        <h1>Front-end</h1>
+                </a>
+                <a href="#UX-container" class="box2" id="box2">
+                    <h1>UCD</h1></a>
+                <a href="#media-conatiner" class="box3" id="box3">
+                    <h1>Media design</h1></a>
+            </div>
+        </div>
+        <div class="about-me-conatiner">
+            <div class="aboutme-content">
+                <div class="aboutme-text">
+                    <div id="realaboutmetext">
+                        <h1>About me</h1>
+                        <p>I am a university student located in Eindhoven, The Netherlands. Currently studding ICT (Information and Communication Technologies) at Fontys University of Applied Sciences.</p>
+                        <p>Originally from Sofia, Bulgaria I came to The Netherlands so I can improve my skills. I am very passionate about UX design, Web design and front-end development as a whole.</p>
+                        
+                        <p>I am a well-organized, hard-working person with big drive to learn. However, for me is very important to have a lot of different side activates so that life is always interesting.</p>
+                    </div>
+                    <div class="contact-button-div" onclick="contactMe()"><button class="contact-button"><span>Contact me</span></button></div>
+
+                </div>
+                <div class="aboutme-image" id="aboutme-image">
+
+                </div>
+            </div>
+        </div>
+        <div class="contact-me" id="contact-me">
+            <form action="" method="post">
+                <div class="flex">
+                    <div class="inputwrapper small-input">
+                        <input type="text" name="name" id="name" placeholder="Name">
+                    </div>
+                    <div class="inputwrapper small-input">
+                        <input type="email" name="email" id="email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="inputwrapper">
+                    <input type="text" name="name" id="subject" placeholder="Subject">
+                </div>
+                <div class="inputwrapper">
+                    <textarea name="message" id="message" cols="100" rows="5" placeholder="Message"></textarea>
+                </div>
+
+                <input type="submit" value="Send message" class="contact-button">
+        </form>
+        </div>
+        <footer id="footer">
+            <div class="footer-container">
+                <a href="#" target="_blank"><img src="./images/facebook-svg.svg" alt="facebook icon"></a>
+                <a href="https://www.instagram.com/vasiltodorov123/" target="_blank"><img src="./images/instagram-svg.svg" alt="instagram icon"></a>
+                <a href="https://www.linkedin.com/in/vasil-todorov-a633b221a/" target="_blank"><img src="./images/linkedIn-svg.svg" alt="LinkedIn icon"></a>
+                <a href="#" target="_blank"><img src="./images/twitter-svg.svg" alt="Twitter icon"></a>
+                <a href="#" target="_blank"><img src="./images/youtube-svg.svg" alt="YouTube icon"></a>
+                <a href="#" target="_blank"><img src="./images/pinterest-svg.svg" alt="Pinterest icon"></a>
+            </div>
+        </footer>
+    </div>
+    <div class="leftOverlay" id="leftOverlay">
+        <div class="front-loader-container">
+            <svg class="front-loader">
+                <rect class="front-rect"></rect>
+            </svg>
+        </div>
+    </div>
+    <div class="midOverlay" id="midOverlay">
+        <div class="main-loader">Researching</div>
+    </div>
+    <div class="rightOverlay" id="rightOverlay">
+        <div class="media-loader-container">
+            <div class="center">
+                <div class="media-loader-text">Designing</div>
+                <div class="ring"></div>
+            </div>
+        </div>
+    </div>
+    <div class="upOverlay" id="upOverlay"> 
+        <div class="UCD-Ani-body">
+            <div class="UCD-Ani-container">
+                <div class="ux-ring"></div>
+                <div class="ux-ring"></div>
+                <div class="ux-ring"></div>
+                <p>To the main page</p>
+            </div>
+        </div>
+    </div>
+    <div class="front-end-container" id="front-end-container">
+        <nav class="front-nav">
+        <a href="#"><img src="./images/VT-Logo-front.svg" alt="Vasil Todorov logo" class="logo" onmouseenter="mouseIn()" onmouseleave="mouseOut()"></a>
+        <div class="navButtons">
+            <a href="#front-end-container"><button class="front-button">Front-end</button></a>
+            <a href="#UX-container"><button class="front-button">UCD</button></a>
+            <a href="#media-conatiner"><button class="front-button">Media design</button></a>
+        </div>
+    </nav>
+        <div class="front-hero">
+            <div class="front-herobox">
+                <div class="front-hero-text">
+                    <h1 class="front-heading">This is my Front-end Porfolio</h1>
+                    <p class="front-p">Here are a bunch of the projects I have worked and have done throughout my <span class="front-text">front-end development</span> journey</p>
+                </div>
+                <canvas id="front-bg" class="cirlce">
+                    <h1>3D Model</h1>
+                </canvas>
+            </div>
+        </div>
+        <div class="front-herobox2">
+            <div class="tic-container">
+                <h1 class="tic-title">Tic <span>Tac</span> Toe</h1>
+                <div class="tic-status-action">
+                    <div class="tic-status">X is next</div>
+                    <div class="tic-reset">Reset</div>
+                </div>
+                <div class="tic-grid">
+                    <div class="tic-cell top-left"></div>
+                    <div class="tic-cell top-mid"></div>
+                    <div class="tic-cell top-right"></div>
+                    <div class="tic-cell mid-left"></div>
+                    <div class="tic-cell mid-mid"></div>
+                    <div class="tic-cell mid-right"></div>
+                    <div class="tic-cell bot-left"></div>
+                    <div class="tic-cell bot-mid"></div>
+                    <div class="tic-cell bot-right"></div>
+                </div>
+            </div>
+            <div class="front-tetris-text">
+                <h1 class="front-heading">The beauty of creating things</h1>
+                <p class="front-p">Something that always captivated me when it came to <span class="front-text">front-end development</span> was the fact that you can create so much fun things that you can<span class="front-text"> play around with</span>.</p>
+            </div>
+    
+        </div>
+        <div class="front-things-done">
+            <div class="front-things-done-text">
+                <h1 class="front-heading">Projects</h1>
+                <p class="front-p">Here are some of the things I have done so far. Enjoy!</p>
+            </div>
+            <div class="front-filler-box">
+                
+            </div>
+        </div>
+        <div class="front-cards">
+            <div class="front-cards-container">
+                <div class="front-card card1" href="#myModal1"><h1>JS Clock</h1></div>
+                <!-- The Modal -->
+                <div id="myModal1" class="modal">
+                <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header"> 
+                        <h1>Clock<span class="close">×</span></h1> 
+                    </div>
+                        <div class="modal-body">
+                            <div class="body-clock">
+                                <div class="clock">
+                                    <div class="hours"></div>
+                                    <div class="minutes"></div>
+                                    <div class="seconds"></div>
+                                    <div class="number number1">1</div>
+                                    <div class="number number2">2</div>
+                                    <div class="number number3">3</div>
+                                    <div class="number number4">4</div>
+                                    <div class="number number5">5</div>
+                                    <div class="number number6">6</div>
+                                    <div class="number number7">7</div>
+                                    <div class="number number8">8</div>
+                                    <div class="number number9">9</div>
+                                    <div class="number number10">10</div>
+                                    <div class="number number11">11</div>
+                                    <div class="number number12">12</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="front-card card2" href="#myModal2"><h1>PWA</h1></div>
+
+                <div id="myModal2" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-header"> 
+                            <h1>Proggresive web app<span class="close">×</span></h1> 
+                        </div>
+                            <div class="modal-body">
+                                <div class="modal-box pwa-img">
+
+                                </div>
+                                <div class="modal-box">
+                                    <div class="modal-text">
+                                        <h1>How I made the PWA</h1>
+                                        <p>Playing around a bit with how to make PWAs and json files I was able to make not only the tic tac toe a progressive web app but the whole website into one and by doing that I was able to integrate the challenge to the website.</p>
+                                        <a href="./challenges/PWA/index.html" target="_blank">Check the proggresive web app here</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                <div class="front-card card3" href="#myModal3"><h1>Countdown clock</h1></div>
+                <div id="myModal3" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header"> 
+                        <h1>Countdown clock<span class="close">×</span></h1> 
+                    </div>
+                        <div class="modal-body">
+                           
+                            <div class="countdownclock-container">
+                                <p id="countdown">10:00</p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="front-card card4" href="#myModal4"><h1>Dynamic playlist</h1></div>
+                <div id="myModal4" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header"> 
+                        <h1>Dynamic playlist<span class="close">×</span></h1> 
+                    </div>
+                        <div class="modal-body">
+                                <div class="modal-box playlist-img">
+
+                                </div>
+                                <div class="modal-box">
+                                    <div class="modal-text">
+                                        <h1>How I made the Dynamic playlist</h1>
+                                        <p>The main challenge when making the dynamic playlist was using the information, we had gotten from a JavaScript array in a very interactive way. By figuring out how to do that and by figuring out how to connect the buttons to the interactivity of the song I was able to create the dynamic playlist.</p>
+                                        <a href="./challenges/Dynamic playlist/index.html" target="_blank">Check the dynamic playlist here</a>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="front-card card5" href="#myModal5"><h1>Drum kit</h1></div>
+                <div id="myModal5" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header"> 
+                        <h1>Drum kit<span class="close">×</span></h1> 
+                    </div>
+                        <div class="modal-body">
+                           
+                                <div class="modal-box">
+                                    <div class="drum-kit">
+                                        <div class="drum-button punch"><h1>&#x2190;</h1></div>
+                                        <div class="drum-button slap"><h1>&#x2191;</h1></div>
+                                        <div class="drum-button bamboo"><h1>&#x2192;</h1></div>
+                                        <div class="drum-button war-drum"><h1>&#x2193;</h1></div>
+                                    </div>
+                                </div>
+                                <div class="modal-box">
+                                    <div class="modal-text">
+                                        <h1>How I made the drum kit</h1>
+                                        <p>The main challenge here was learning how to connect sound files to buttons on the keyboard</p>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="front-card card6" href="#myModal6"><h1>Dynamic logo</h1></div>
+                <div id="myModal6" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header"> 
+                        <h1>Dynamic logo<span class="close">×</span></h1> 
+                    </div>
+                        <div class="modal-body">
+                            <div class="modal-box dynamic-logo-img">
+
+                            </div>
+                            <div class="modal-box">
+                                <div class="modal-text">
+                                    <h1>How I made the Dynamic logo</h1>
+                                    <p>What I did for the dynamic logo was to change it when changing the page and by doing that I integrated the challenge to the website.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="front-card card7" href="#myModal7"><h1>Three.js</h1></div>
+                <div id="myModal7" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header"> 
+                        <h1>Three.js<span class="close">×</span></h1> 
+                    </div>
+                        <div class="modal-body">
+                            <div class="modal-box card7">
+
+                            </div>
+                            <div class="modal-box">
+                                <div class="modal-text">
+                                    <h1>How I made the Three.js 'cube'</h1>
+                                    <p>Playing around with a JavaScript library was very fun. At the start I had hard time understanding how to rung the library but in the end by learning a bit on how to import it and how to permanently set it up I was able to get a three.js torus in my front-end hero box and by doing that integrating the challenge to my portfolio website.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="front-card card8" href="#myModal8"><h1>JS Pie chart</h1></div>
+                <div id="myModal8" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header"> 
+                        <h1>JS Pie chart<span class="close">×</span></h1> 
+                    </div>
+                        <div class="modal-body">
+                           
+                            <div class="chart-container">
+                                <canvas id="canvas" width="400" height="400"></canvas>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="front-card card9" href="#myModal9"><h1>Pig latin</h1></div>
+                <div id="myModal9" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header"> 
+                        <h1>Pig latin<span class="close">×</span></h1> 
+                    </div>
+                        <div class="modal-body">
+                            <div class="modal-box card9">
+
+                            </div>
+                            <div class="modal-box">
+                                <div class="modal-text">
+                                    <h1>Talk to the pig</h1>
+                                    <input type="text" id="pig-words" class="pig-input">
+                                    <button id="getWord" onclick="pigWords()" class="front-button">Get words</button>
+                                    <p id="pig">The pig says: </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="front-card card10" href="#myModal10"><h1>Node.js Chat app</h1></div>
+                <div id="myModal10" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header"> 
+                        <h1>Node.js Chat app<span class="close">×</span></h1> 
+                    </div>
+                        <div class="modal-body">
+                                <div class="modal-box card10">
+
+                                </div>
+                                <div class="modal-box">
+                                    <div class="modal-text">
+                                        <h1>How I made the Chat app</h1>
+                                        <p>The main challenge here was at the start creating a node.js server that could send the message between the 2(or more) people in the chat. This I was able to do after some research and after that the next challenge I had was to upload it to Heroku. After reading some documentation on how to upload it there I was able to successfully run the chat app online.</p>
+                                        <a href="http://i493594.hera.fhict.nl/chat_app/index.html" target="_blank">Check the chat app here</a>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="front-card card11" href="#myModal11"><h1>Parallax</h1></div>
+                <div id="myModal11" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header"> 
+                        <h1>Parallax<span class="close">×</span></h1> 
+                    </div>
+                        <div class="modal-body">
+                                <div class="modal-box parallax-img">
+
+                                </div>
+                                <div class="modal-box">
+                                    <div class="modal-text">
+                                        <h1>How I made the Parallax</h1>
+                                        <p>Playing around with the properties of CSS I was able to create a parallax effect that I added to my media design page of my portfolio. The main challenge here was integrating a video as background for the parallax.</p>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="front-card card12" href="#myModal12"><h1>Interactive doodle</h1></div>
+                <div id="myModal12" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header"> 
+                        <h1>Interactive doodle<span class="close">×</span></h1> 
+                    </div>
+                        <div class="modal-body">
+                            <div class="modal-box doodle-img">
+
+                            </div>
+                            <div class="modal-box">
+                                    <div class="modal-text">
+                                        <h1>How I made the interactive doodle</h1>
+                                        <p>For the Interactive doodle what I did was to create a easter egg on the main page. By hovering for a couple of seconds on the logo of the main page something changes on the page. What could that be?</p>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="front-card card13" href="#myModal13"><h1>Chrome extension</h1></div>
+                <div id="myModal13" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header"> 
+                        <h1>Chrome extension<span class="close">×</span></h1> 
+                    </div>
+                        <div class="modal-body">
+                           
+                            <div class="modal-box extension-img">
+
+                            </div>
+                            <div class="modal-box">
+                                    <div class="modal-text">
+                                        <h1>How I made the Chrome extension</h1>
+                                        <p>At the start seeing a challenge that was to create a Chrome extension sounded like something that would be extremely hard, however by reading the documentation that about how to create chrome extensions on the chrome developer website I was able to easily create a my first Chrome extension. Download the extension and check what it does when you go to https://www.google.com/</p>
+                                        <a href="../vasil-extension.rar" download>download the extension</a>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="front-card card14" href="#myModal14"><h1>JavaScript accordion</h1></div>
+                <div id="myModal14" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header"> 
+                        <h1>JavaScript accordion<span class="close">×</span></h1> 
+                    </div>
+                        <div class="modal-body">
+                            <div class="modal-box accordion-img">
+
+                            </div>
+                            <div class="modal-box">
+                                <div class="modal-text">
+                                    <h1>How I made the JavaScript accordion</h1>
+                                    <p>Following the logic used for creating a JavaScript accordion I created the contact form on my website and by doing that I integrated the challenge to my website.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="front-card card15" href="#myModal15"><h1>Basic functions</h1></div>
+                <div id="myModal15" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header"> 
+                        <h1>Basic functions<span class="close">×</span></h1> 
+                    </div>
+                        <div class="modal-body">
+                           
+                            <div class="modal-box">
+                                    <div class="modal-text">
+                                    <h1>How I made the basic functions</h1>
+                                    <p>At the start to get a better understanding of the most basic functions of JavaScript I created a couple of mathematical word manipulation functions.</p>
+                                </div>
+                            </div>
+                            <div class="modal-box">
+                                <div class="modal-text">
+                                    <div class="link"><a href="./challenges/First_Factorial.html" target="_blank">First Factorial</a></div>
+                                    <div class="link"><a href="/challenges/Simple_Adding.html" target="_blank">Simple Adding</a></div>
+                                    <div class="link"><a href="./challenges/First_Reverse.html" target="_blank">First First_Reverse</a></div>
+                                    <div class="link"><a href="./challenges/Letter Capitalize.html" target="_blank">Letter Capitalize</a></div>
+                                    <div class="link"><a href="./challenges/Letter Changes.html" target="_blank">Letter Changes</a></div>
+                                    <div class="link"><a href="./challenges/Longest_Word.html" target="_blank">Longest Word</a></div>
+                                    <div class="link"><a href="./challenges/Simple_symbols.html" target="_blank">Simple symbols</a></div>
+                                    <div class="link"><a href="./challenges/Word_Count.html" target="_blank">Word Count</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="front-card card16" href="#myModal16"><h1>?</h1></div>
+                <div id="myModal16" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header"> 
+                        <h1>?<span class="close">×</span></h1> 
+                    </div>
+                        <div class="modal-body">
+                                <div class="modal-box">
+
+                                </div>
+                            <div class="modal-box">
+                                <div class="modal-text">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="front-footer">
+            <div class="footer-container">
+                <a href="#" target="_blank"><img src="./images/front-facebook-svg.svg" alt="facebook icon"></a>
+                <a href="https://www.instagram.com/vasiltodorov123/" target="_blank"><img src="./images/front-instagram-svg.svg" alt="instagram icon"></a>
+                <a href="https://www.linkedin.com/in/vasil-todorov-a633b221a/" target="_blank"><img src="./images/front-linkedIn-svg.svg" alt="LinkedIn icon"></a>
+                <a href="#" target="_blank"><img src="./images/front-twitter-svg.svg" alt="Twitter icon"></a>
+                <a href="#" target="_blank"><img src="./images/front-youtube-svg.svg" alt="YouTube icon"></a>
+                <a href="#" target="_blank"><img src="./images/front-pinterest-svg.svg" alt="Pinterest icon"></a>
+            </div>
+        </footer>
+    </div>
+    <div class="UX-container" id="UX-container">
+        <nav class="main-nav">
+
+            <a href="#"><img src="./images/VT-Logo-UX.svg" alt="Vasil Todorov logo" class="logo" onmouseenter="mouseIn()" onmouseleave="mouseOut()"></a>
+        <div class="navButtons">
+            <a href="#front-end-container"><button class="button">Front-end</button></a>
+            <a href="#UX-container"><button class="button">UCD</button></a>
+            <a href="#media-conatiner"><button class="button">Media design</button></a>
+        </div>
+        </nav>
+        <h3>Here are some of the things I have done as a UCD designer</h3>
+
+
+        <div class="ux-body">
+            <div class="ux-first-2-rows">
+                <a href="./pdf/Assignment D by Vasil Todorov.pdf" target="_blank">
+                    <div class="ux-big-box ux-big-box-interactive ux-interaction-design ux-card-picture ux-box-shaodow">
+                        <div class="ux-card-overlay">
+                            <h4>Interaction design</h4>
+                        </div>
+                    </div>
+                </a>
+                <div class="ux-mid-box-container">
+                    <div class="ux-mid-box">
+                        <a href="./pdf/Interaction design comparison.pdf" target="_blank">
+                            <div class="ux-small-box ux-Interaction-design-comparison ux-card-picture ux-box-shaodow">
+                                <div class="ux-card-overlay">
+                                    <h4>Interaction design comparison</h4>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./pdf/annotated-Card_sorting_workshop-1.pdf" target="_blank">
+                            <div class="ux-small-box ux-card-picture ux-card-sorting ux-box-shaodow">
+                                <div class="ux-card-overlay">
+                                    <h4>Card sorting</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="ux-mid-box ux-margin-top">
+                        <a href="./pdf/Task-analysis.pdf" target="_blank">
+                            <div class="ux-small-box ux-card-picture ux-task-analysis ux-box-shaodow">
+                                <div class="ux-card-overlay">
+                                    <h4>Task analysis</h4>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./pdf/Smart Toilet concept by Vasil Todorov (1).pdf" target="_blank">
+                            <div class="ux-small-box ux-card-picture ux-impact-of-technology ux-box-shaodow">
+                                <div class="ux-card-overlay">
+                                    <h4>Impact of technology</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ux-second-1-row">
+                <a href="./pdf/affinity-mapping.pdf" target="_blank">
+                    <div class="ux-small-box ux-card-picture ux-affinity-mapping ux-box-shaodow">
+                        <div class="ux-card-overlay">
+                            <h4>Affinity mapping</h4>
+                        </div>
+                    </div>
+                </a>
+                <a href="./pdf/affinity-mapping.pdf" target="_blank">
+                    <div class="ux-small-box ux-card-picture ux-emphaty-mapping ux-box-shaodow">
+                        <div class="ux-card-overlay">
+                            <h4>Emphaty mapping</h4>
+                        </div>
+                    </div>
+                </a>
+                <a href="./pdf/Musical-portfolio-case-study.pdf" target="_blank">
+                    <div class="ux-mid-box ux-card-picture ux-musical-portfolio-case-study ux-mid-box-interactive ux-box-shaodow">
+                        <div class="ux-card-overlay">
+                            <h4>Musical portfolio case study</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="ux-first-2-rows">
+                <div class="ux-big-box">
+                    <div class="ux-mid-box-hor">
+                        <a href="./pdf/Bad-UX-design.pdf" target="_blank">
+                            <div class="ux-small-box ux-card-picture ux-bad-ux ux-box-shaodow">
+                                <div class="ux-card-overlay">
+                                    <h4>Defining bad UX design</h4>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./pdf/Competitor-analysis.pdf" target="_blank">
+                            <div class="ux-small-box ux-margin-top ux-card-picture ux-competitor-analysis ux-box-shaodow">
+                                <div class="ux-card-overlay">
+                                    <h4>Competitor analysis</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <a href="./pdf/User-journey.pdf" target="_blank">
+                        <div class="ux-mid-box-hor ux-mid-box-hor-interactive ux-card-picture ux-user-journey ux-box-shaodow">
+                            <div class="ux-card-overlay">
+                                <h4>User jorney</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="ux-mid-box-container">
+                    <div class="ux-mid-box">
+                        <a href="./pdf/Heuristic-evaluation-by-Vasil Todorov.pdf" target="_blank">
+                            <div class="ux-small-box ux-card-picture ux-heuristic-evaluation ux-box-shaodow">
+                                <div class="ux-card-overlay">
+                                    <h4>Heuristic evaluation</h4>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./pdf/usability-test-plan-by-visa- denied.pdf" target="_blank">
+                            <div class="ux-small-box ux-card-picture ux-test-prep-group ux-box-shaodow">
+                                <div class="ux-card-overlay">
+                                    <h4>Usability test plan</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="ux-mid-box ux-margin-top">
+                        <a href="./pdf/usability-test.pdf" target="_blank">
+                            <div class="ux-small-box ux-card-picture ux-test-group ux-box-shaodow">
+                                <div class="ux-card-overlay">
+                                    <h4>Usability test</h4>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./pdf/UCD Porfolio Feedback point 3 by Vasil Todorov.pdf" target="_blank">
+                            <div class="ux-small-box ux-card-picture ux-portfolio ux-box-shaodow">
+                                <div class="ux-card-overlay">
+                                    <h4>Ux portfolio PDF</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-container">
+                <a href="#" target="_blank"><img src="./images/facebook-svg.svg" alt="facebook icon"></a>
+                <a href="https://www.instagram.com/vasiltodorov123/" target="_blank"><img src="./images/instagram-svg.svg" alt="instagram icon"></a>
+                <a href="https://www.linkedin.com/in/vasil-todorov-a633b221a/" target="_blank"><img src="./images/linkedIn-svg.svg" alt="LinkedIn icon"></a>
+                <a href="#" target="_blank"><img src="./images/twitter-svg.svg" alt="Twitter icon"></a>
+                <a href="#" target="_blank"><img src="./images/youtube-svg.svg" alt="YouTube icon"></a>
+                <a href="#" target="_blank"><img src="./images/pinterest-svg.svg" alt="Pinterest icon"></a>
+            </div>
+        </footer>
+    </div>
+    <div class="media-conatiner" id="media-conatiner">
+        <nav class="main-nav">
+            <a href="#"><img src="./images/VT-Logo-media.svg" alt="Vasil Todorov logo" class="logo" onmouseenter="mouseIn()" onmouseleave="mouseOut()"></a>
+        <div class="navButtons">
+            <a href="#front-end-container"><button class="button">Front-end</button></a>
+            <a href="#UX-container"><button class="button">UCD</button></a>
+            <a href="#media-conatiner"><button class="button">Media design</button></a>
+        </div>
+        </nav>
+        
+        <div class="parallax-body">
+            <div class="parallax">
+                <video autoplay muted loop id="myVideo">
+                    <source src="./images/pexels-ron-lach-7117911_2.mp4" type="video/mp4">
+                </video>
+                <div class="media-parallax-fillerbox"></div>
+                <h1>My media production porfolio</h1>
+            </div>
+            <div class="media-carousel-container">
+                <h3>Here are some of the things I have done</h3>
+
+                        <section aria-label="Newest Photos">
+                            <div class="carousel" data-carousel>
+                                <!--<button class="carousel-button prev" data-carousel-button="prev">&#8647</button> -->
+                                <img src="./images/arrow-left.svg" alt="left-arrow" class="carousel-button prev" data-carousel-button="prev">
+                                <!--<button class="carousel-button next" data-carousel-button="next">&#8649</button> -->
+                                <img src="./images/arrow-right.svg" alt="right-arrow" class="carousel-button next" data-carousel-button="next">
+                                <ul data-slides>
+                                    <li class="slide" data-active   >
+                                        <div class="media-work-container" id="firstSlider">
+                                            <div class="media-work-img">
+                                                <img src="./images/Photography-image.png" alt="image">
+                                            </div>
+                                            <div class="media-work-text">
+                                                <div class="text-text">
+                                                    <h3>Photography</h3>
+                                                    <p>While learning how to use all the different settings of a camera I was taking pictures. These pictures show all the different ways you can use a camera. I documented all my findings and put them in this portfolio created in adobe inDesign and edited them using Photoshop. In total I took around 1000 pictures and use around 100.</p>
+                                                </div>
+                                                <div class="learn-more-button-container">
+                                                    <a href="./pdf/Photography-porfolio-by-Vasil-Todorov.pdf" target="_blank"><button class="contact-button"><span>Learn more</span></button></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="slide">
+                                        <div class="media-work-container">
+                                            <div class="media-work-img">
+                                                <iframe width="560" height="315" src="https://youtu.be/ofUZKl9ujEY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                            <div class="media-work-text">
+                                                <div class="text-text">
+                                                    <h3>Short documentarie</h3>
+                                                    <p>For this assignment me and my group had to create a short documentary. We chose the main topic of our documentary to be PSV since we are all currently based in Eindhoven. We used DaVinci Resolve to edit our short documentary. We went through the whole process from story boards to actual video.</p>
+                                                </div>
+                                                <div class="learn-more-button-container">
+                                                    <a href="https://youtu.be/ofUZKl9ujEY" target="_blank"><button class="contact-button"><span>Learn more</span></button></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="slide">
+                                        <div class="media-work-container">
+                                            <div class="media-work-img">
+                                                <img src="./images/Poster-design-image.png" alt="image">
+                                            </div>
+                                            <div class="media-work-text">
+                                                <div class="text-text">
+                                                    <h3>Poster design</h3>
+                                                    <p>Our first task for adobe InDesign was to create a poster. Sounds simple at the start, however once you start designing it you learn that there are a lot of small details that need to be just about right so that the poster looks good. Type, color, placement, white space and many other played a huge role in the design.</p>
+                                                </div>
+                                                <div class="learn-more-button-container">
+                                                    <a href="./pdf/Restaurant-VT.pdf" target="_blank"><button class="contact-button"><span>Learn more</span></button></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="slide">
+                                        <div class="media-work-container" id="lastSlider">
+                                            <div class="media-work-img">
+                                                <img src="./images/Logo-design-image.png" alt="image">
+                                            </div>
+                                            <div class="media-work-text">
+                                                <div class="text-text">
+                                                    <h3>Logo design</h3>
+                                                    <p>The first adobe program we tackled was the famous adobe illustrator. Our task was to create a logo I started out by outlining some paper sketches and then moved to digital. Sadly I was not satisfied with the first results so I did what good logo designers do and I iterated a lot until I found a design that I liked.</p>
+                                                </div>
+                                                <div class="learn-more-button-container">
+                                                    <a href="./pdf/Logo-Design-by-Vasil-Todorov.pdf" target="_blank"><button class="contact-button"><span>Learn more</span></button></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+            </div>
+            </div>
+            <footer>
+                <div class="footer-container">
+                    <a href="#" target="_blank"><img src="./images/facebook-svg.svg" alt="facebook icon"></a>
+                    <a href="https://www.instagram.com/vasiltodorov123/" target="_blank"><img src="./images/instagram-svg.svg" alt="instagram icon"></a>
+                    <a href="https://www.linkedin.com/in/vasil-todorov-a633b221a/" target="_blank"><img src="./images/linkedIn-svg.svg" alt="LinkedIn icon"></a>
+                    <a href="#" target="_blank"><img src="./images/twitter-svg.svg" alt="Twitter icon"></a>
+                    <a href="#" target="_blank"><img src="./images/youtube-svg.svg" alt="YouTube icon"></a>
+                    <a href="#" target="_blank"><img src="./images/pinterest-svg.svg" alt="Pinterest icon"></a>
+                </div>
+            </footer>
+    </div>
+
+
+    <audio id="slap" src="./sounds/slap-sound.mp3"></audio>
+    <audio id="punch" src="./sounds/punch-sound.mp3"></audio>
+    <audio id="warDrum" src="./sounds/war-drum.mp3"></audio>
+    <audio id="bambooHit" src="./sounds/bamboo-hit.mp3"></audio>
+    <audio id="pig-sound" src="./sounds/pig-sound.mp3"></audio>
+    <script src="script.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@0.126.1/build/three.module.js"
+          }
+        }
+      </script>
+    <script type="module" src="three.js"></script>
+    <script>
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+        }
+    </script>
+</body>
+</html>
